@@ -1,0 +1,3 @@
+In React Native, when working with FlatList, using the `keyExtractor` prop incorrectly can lead to performance issues and unexpected behavior.  If the `keyExtractor` function doesn't return a unique key for each item, React Native might not be able to efficiently update the list when data changes. This can result in items not rendering correctly, flickering, or the entire list re-rendering unnecessarily. 
+
+For example, if you use the index as the key (`keyExtractor={(item, index) => index}`), and the order of items in your data array changes, React Native might not recognize that only the order changed, it might think the entire list needs a re-render leading to performance issues. 
